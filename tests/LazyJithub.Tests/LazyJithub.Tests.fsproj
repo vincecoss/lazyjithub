@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="FakeGitHub.fs" />
+    <Compile Include="ReadOnlyTests.fs" />
+    <Compile Include="ConfigTests.fs" />
+    <Compile Include="ModelTests.fs" />
+    <Compile Include="MarkdownTests.fs" />
+    <Compile Include="GitHubTests.fs" />
+    <Compile Include="RenderTests.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+    <PackageReference Include="xunit" Version="2.9.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\LazyJithub\LazyJithub.fsproj" />
+  </ItemGroup>
+
+</Project>
